@@ -1,20 +1,35 @@
 ### Virtual environment for Jupyter Notebook
 
 Create virtual environment
-```bash
-python3 -m venv airflow-venv
-source airflow-venv/bin/activate
+
+```shell script
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 Install Jupyter Notebook and add virtual environment
 
-```bash
+```shell script
 pip install notebook
 pip install --user ipykernel
-python -m ipykernel install --user --name=airflow-venv
+python -m ipykernel install --user --name=venv
 ```
 
 Run Jupyter
-```bash
+```shell script
 jupyter notebook
+```
+
+### Starting up an Airflow server in Docker
+
+Start Airflow in Docker
+
+```shell script
+docker-compose up
+```
+
+Shut the server down
+
+```shell script
+docker-compose down
 ```
